@@ -1,86 +1,140 @@
 import { Link } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth";
 
-
-export default function Home(){
+export default function Home() {
 
     const { usuario } = useAuth();
-
 
     return (
 
         <div className="container mt-5">
 
+            <div className="text-center mb-5">
+
+                <h1>🎵 API Músicas</h1>
+
+                <p className="lead">
+                    Gerencie artistas, músicas e playlists em um único lugar.
+                </p>
+
+            </div>
 
             {!usuario ? (
 
-                <>
+                <div className="text-center">
 
-                    <h1>
-                        Bem-vindo à API Músicas
-                    </h1>
-
-
-                    <p>
-                        Gerencie artistas, álbuns, músicas e playlists.
+                    <p className="mb-4">
+                        Faça login para acessar todas as funcionalidades do sistema.
                     </p>
 
-
                     <Link
-                    className="btn btn-primary me-2"
-                    to="/login"
+                        className="btn btn-primary me-3"
+                        to="/login"
                     >
                         Entrar
                     </Link>
 
-
                     <Link
-                    className="btn btn-success"
-                    to="/cadastro"
+                        className="btn btn-success"
+                        to="/cadastro"
                     >
-                        Criar conta
+                        Criar Conta
                     </Link>
 
-
-                </>
-
+                </div>
 
             ) : (
 
-
                 <>
 
-                    <h1>
-                        Bem-vindo!
-                    </h1>
+                    <div className="row g-4">
 
+                        <div className="col-md-4">
 
-                    <p>
-                        Acesse suas músicas e playlists.
-                    </p>
+                            <div className="card h-100">
 
+                                <div className="card-body text-center">
 
-                    <Link
-                    className="btn btn-primary me-2"
-                    to="/musicas"
-                    >
-                        Músicas
-                    </Link>
+                                    <h2>🎶</h2>
 
+                                    <h5>Músicas</h5>
 
-                    <Link
-                    className="btn btn-success"
-                    to="/playlists"
-                    >
-                        Playlists
-                    </Link>
+                                    <p>
+                                        Cadastre, edite e organize suas músicas.
+                                    </p>
 
+                                    <Link
+                                        className="btn btn-primary"
+                                        to="/musicas"
+                                    >
+                                        Acessar
+                                    </Link>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div className="col-md-4">
+
+                            <div className="card h-100">
+
+                                <div className="card-body text-center">
+
+                                    <h2>🎤</h2>
+
+                                    <h5>Artistas</h5>
+
+                                    <p>
+                                        Gerencie todos os artistas cadastrados.
+                                    </p>
+
+                                    <Link
+                                        className="btn btn-primary"
+                                        to="/artistas"
+                                    >
+                                        Acessar
+                                    </Link>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div className="col-md-4">
+
+                            <div className="card h-100">
+
+                                <div className="card-body text-center">
+
+                                    <h2>🎼</h2>
+
+                                    <h5>Playlists</h5>
+
+                                    <p>
+                                        Crie playlists e adicione suas músicas favoritas.
+                                    </p>
+
+                                    <Link
+                                        className="btn btn-primary"
+                                        to="/playlists"
+                                    >
+                                        Acessar
+                                    </Link>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
 
                 </>
 
-
             )}
-
 
         </div>
 

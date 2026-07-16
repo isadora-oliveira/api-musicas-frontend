@@ -1,0 +1,319 @@
+/* ===========================
+   API MÚSICAS - THEME REGGAE
+=========================== */
+
+body{
+    background:#ece7d6;
+    color:#333;
+    font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+.navbar{
+
+    background:#1B4332 !important;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.18);
+
+    padding:14px 0;
+
+}
+
+.navbar .container{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:35px;
+
+    flex-wrap:wrap;
+
+}
+
+.navbar-brand{
+
+    color:#F6F4E8 !important;
+
+    font-size:1.5rem;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+    margin:0;
+
+}
+
+.navbar .btn{
+
+    background:transparent;
+
+    color:#F6F4E8;
+
+    border:none;
+
+    padding:8px 16px;
+
+    border-radius:8px;
+
+    font-weight:600;
+
+    transition:.2s;
+
+}
+
+.navbar .btn:hover{
+
+    background:rgba(255,255,255,.12);
+
+    color:#FFD166;
+
+}
+
+.navbar .btn:focus{
+
+    box-shadow:none;
+
+}
+
+/* Containers */
+
+.container{
+    animation:fade .25s ease;
+}
+
+/* Cards */
+
+.card{
+    border:none;
+    border-radius:14px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    overflow:hidden;
+}
+
+/* Títulos */
+
+h1{
+    color:#1B4332;
+    font-weight:700;
+    margin-bottom:25px;
+}
+
+h2,h3,h4{
+    color:#2D6A4F;
+}
+
+/* Inputs */
+
+.form-control{
+
+    border-radius:10px;
+    border:1px solid #d8d4c6;
+
+}
+
+.form-control:focus{
+
+    border-color:#2D6A4F;
+
+    box-shadow:0 0 0 .2rem rgba(45,106,79,.2);
+
+}
+
+/* Labels */
+
+.form-label{
+
+    font-weight:600;
+
+    color:#2D6A4F;
+
+}
+
+/* Botões */
+
+.btn{
+
+    border-radius:10px;
+
+    transition:.25s;
+
+}
+
+/* Salvar */
+
+.btn-success{
+
+    background:#2D6A4F;
+
+    border-color:#2D6A4F;
+
+}
+
+.btn-success:hover{
+
+    background:#1B4332;
+
+    border-color:#1B4332;
+
+}
+
+/* Abrir */
+
+.btn-primary{
+
+    background:#D4A017;
+
+    border-color:#D4A017;
+
+    color:#222;
+
+}
+
+.btn-primary:hover{
+
+    background:#B8860B;
+
+    border-color:#B8860B;
+
+    color:white;
+
+}
+
+/* Excluir */
+
+.btn-danger{
+
+    background:#9D0208;
+
+    border-color:#9D0208;
+
+}
+
+.btn-danger:hover{
+
+    background:#6A040F;
+
+}
+
+/* Voltar */
+
+.btn-secondary{
+
+    background:#6C757D;
+
+}
+
+/* Tabelas */
+
+.table{
+
+    margin-bottom:0;
+
+}
+
+.table-dark{
+
+    background:#1B4332 !important;
+
+}
+
+.table thead th{
+
+    border:none;
+
+}
+
+.table tbody tr{
+
+    transition:.15s;
+
+}
+
+.table tbody tr:hover{
+
+    background:#f5f1e5;
+
+}
+
+/* Links */
+
+a{
+
+    text-decoration:none;
+
+    color:#2D6A4F;
+
+}
+
+a:hover{
+
+    color:#1B4332;
+
+}
+
+/* Alertas */
+
+.alert-danger{
+
+    border-radius:10px;
+
+}
+
+/* Footer (caso tenha) */
+
+footer{
+
+    color:#666;
+
+}
+
+/* Scroll */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#ece7d6;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#2D6A4F;
+
+    border-radius:20px;
+
+}
+
+/* Animação */
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(10px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:none;
+
+}
+
+}

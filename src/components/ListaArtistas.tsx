@@ -66,7 +66,6 @@ export default function ListaArtistas(){
 
                             <tr>
 
-                                <th>ID</th>
                                 <th>Nome</th>
                                 <th>Gênero</th>
                                 <th>Ações</th>
@@ -81,8 +80,6 @@ export default function ListaArtistas(){
                                 artistas.map((artista)=>(
 
                                     <tr key={artista.id}>
-
-                                        <td>{artista.id}</td>
 
                                         <td>{artista.nome}</td>
 
