@@ -1,63 +1,89 @@
 import { Link } from "react-router-dom";
+import { useAuth } from "../hooks/useAuth";
 
 
 export default function Home(){
 
-
-  return (
-
-
-    <div className="container mt-5">
+    const { usuario } = useAuth();
 
 
-      <div className="card shadow">
+    return (
+
+        <div className="container mt-5">
 
 
-        <div className="card-body text-center p-5">
+            {!usuario ? (
+
+                <>
+
+                    <h1>
+                        Bem-vindo à API Músicas
+                    </h1>
 
 
-          <h1 className="display-4 mb-3">
-            API de Músicas
-          </h1>
+                    <p>
+                        Gerencie artistas, álbuns, músicas e playlists.
+                    </p>
 
 
-
-          <p className="lead">
-            Gerencie músicas, artistas e álbuns
-            através de uma aplicação React consumindo
-            uma API REST.
-          </p>
-
-
-
-          <hr />
+                    <Link
+                    className="btn btn-primary me-2"
+                    to="/login"
+                    >
+                        Entrar
+                    </Link>
 
 
+                    <Link
+                    className="btn btn-success"
+                    to="/cadastro"
+                    >
+                        Criar conta
+                    </Link>
 
-          <p>
-            Cadastre novas músicas, visualize sua biblioteca
-            e mantenha seus dados organizados.
-          </p>
+
+                </>
 
 
+            ) : (
 
-          <Link
-            className="btn btn-primary btn-lg mt-3"
-            to="/musicas"
-          >
-            Acessar músicas
-          </Link>
+
+                <>
+
+                    <h1>
+                        Bem-vindo!
+                    </h1>
+
+
+                    <p>
+                        Acesse suas músicas e playlists.
+                    </p>
+
+
+                    <Link
+                    className="btn btn-primary me-2"
+                    to="/musicas"
+                    >
+                        Músicas
+                    </Link>
+
+
+                    <Link
+                    className="btn btn-success"
+                    to="/playlists"
+                    >
+                        Playlists
+                    </Link>
+
+
+                </>
+
+
+            )}
 
 
         </div>
 
-
-      </div>
-
-
-    </div>
-
-
-  );
+    );
 
 }

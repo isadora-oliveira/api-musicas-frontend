@@ -4,7 +4,7 @@ import { api } from "../services/api";
 import { useMusicas } from "../hooks/useMusicas";
 
 
-export default function EditarMusica() {
+export default function FormEditarMusica() {
 
   const { id } = useParams();
 
@@ -217,6 +217,13 @@ export default function EditarMusica() {
           type="submit"
         >
           Salvar Alterações
+        </button>
+        <button
+          type="button"
+          className="btn btn-secondary ms-2"
+          onClick={()=>navigate("/musicas")}
+        >
+          Voltar
         </button>
 
 

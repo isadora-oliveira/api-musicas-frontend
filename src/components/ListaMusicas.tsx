@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useMusicas } from "../hooks/useMusicas";
+import { useState } from "react";
 
 
 export default function ListaMusicas() {
@@ -8,6 +9,8 @@ export default function ListaMusicas() {
 
   const { musicas, carregando, excluirMusica } = useMusicas();
 
+  const [busca, setBusca] = useState("");
+  const [ordenacao, setOrdenacao] = useState("titulo");
 
 
   async function removerMusica(id: number) {
@@ -58,13 +61,19 @@ export default function ListaMusicas() {
       <div className="d-flex justify-content-between align-items-center mb-4">
 
         <h1>
-          Lista de Músicas
+        Lista de Músicas
         </h1>
 
 
+        <button
+        className="btn btn-success"
+        onClick={()=>navigate("/nova-musica")}
+        >
+        Nova Música
+        </button>
+
 
       </div>
-
 
 
       <div className="card shadow">
@@ -78,12 +87,11 @@ export default function ListaMusicas() {
             <thead className="table-dark">
 
               <tr>
-
-                <th>ID</th>
                 <th>Título</th>
                 <th>Duração</th>
                 <th>Artista</th>
                 <th>Álbum</th>
+                <th>Gênero</th>
                 <th>Ações</th>
 
               </tr>
@@ -101,17 +109,12 @@ export default function ListaMusicas() {
 
 
                   <td>
-                    {musica.id}
-                  </td>
-
-
-                  <td>
                     {musica.titulo}
                   </td>
 
 
                   <td>
-                    {musica.duracaoSegundos}s
+                    {musica.duracaoSegundos}
                   </td>
 
 
@@ -122,6 +125,10 @@ export default function ListaMusicas() {
 
                   <td>
                     {musica.album.titulo}
+                  </td>
+
+                  <td>
+                    {musica.artista.genero}
                   </td>
 
 

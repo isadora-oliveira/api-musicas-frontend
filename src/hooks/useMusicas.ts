@@ -5,6 +5,7 @@ import MusicaService from "../services/MusicaService";
 export interface Artista {
   id: number;
   nome: string;
+  genero: string;
 }
 
 

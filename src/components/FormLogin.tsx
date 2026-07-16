@@ -24,7 +24,7 @@ export default function FormLogin(){
 
     alert("Login realizado com sucesso!");
 
-    navigate("/musicas");
+    navigate("/");
 
 
   } catch(error){
@@ -60,13 +60,23 @@ export default function FormLogin(){
         onChange={(e)=>setSenha(e.target.value)}
       />
 
+      <div className="mb-3">
+        <button
+          className="btn btn-primary"
+          onClick={entrar}
+        >
+          Entrar
+        </button>
 
-      <button
-        className="btn btn-primary"
-        onClick={entrar}
-      >
-        Entrar
-      </button>
+        <button
+          className="btn btn-secondary ms-2"
+          onClick={()=>navigate("/")}
+        >
+            Voltar
+        </button>
+
+      </div>
+
 
 
     </div>

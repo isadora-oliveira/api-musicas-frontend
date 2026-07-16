@@ -15,7 +15,7 @@ export default function Navbar(){
 
     logout();
 
-    navigate("/login");
+    navigate("/");
 
   }
 
@@ -27,14 +27,6 @@ export default function Navbar(){
 
 
       <div className="container">
-
-
-        <Link 
-          className="navbar-brand" 
-          to="/"
-        >
-          API Músicas
-        </Link>
 
 
 
@@ -50,24 +42,10 @@ export default function Navbar(){
 
 
 
-          {!usuario && (
-
-            <Link 
-              className="btn btn-dark"
-              to="/login"
-            >
-              Login
-            </Link>
-
-          )}
-
-
-
 
           {usuario && (
 
             <>
-
 
               <Link 
                 className="btn btn-dark"
@@ -75,16 +53,20 @@ export default function Navbar(){
               >
                 Músicas
               </Link>
-
+              <Link
+                className="btn btn-dark"
+                to="/artistas"
+              >
+                Artistas
+              </Link>
 
 
               <Link 
                 className="btn btn-dark"
-                to="/nova-musica"
+                to="/playlists"
               >
-                Nova Música
+                Playlists
               </Link>
-
 
 
               <button
@@ -93,7 +75,6 @@ export default function Navbar(){
               >
                 Sair
               </button>
-
 
             </>
 

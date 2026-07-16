@@ -13,6 +13,54 @@ async function listar() {
 }
 
 
+async function inserir(dados:any){
+
+  const resposta = await api.post(
+    URI,
+    dados
+  );
+
+  return resposta.data;
+
+}
+
+
+async function atualizar(id:number, dados:any){
+
+  const resposta = await api.put(
+    `${URI}/${id}`,
+    dados
+  );
+
+  return resposta.data;
+
+}
+
+
+async function remover(id:number){
+
+  await api.delete(
+    `${URI}/${id}`
+  );
+
+}
+async function buscarPorId(id:number){
+
+  const resposta = await api.get(
+    `${URI}/${id}`
+  );
+
+  return resposta.data;
+
+}
+
+
 export default {
-  listar
+
+  listar,
+  inserir,
+  atualizar,
+  remover,
+  buscarPorId
+
 };

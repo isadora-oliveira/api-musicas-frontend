@@ -4,8 +4,7 @@ import { useArtistas } from "../hooks/useArtistas";
 import { useAlbuns } from "../hooks/useAlbuns";
 import { useMusicas } from "../hooks/useMusicas";
 
-
-export default function NovaMusica() {
+export default function FormNovaMusica() {
 
   const navigate = useNavigate();
 
@@ -286,7 +285,14 @@ export default function NovaMusica() {
               Cadastrar
 
             </button>
-
+            
+            <button
+              type="button"
+              className="btn btn-secondary ms-2"
+              onClick={()=>navigate("/musicas")}
+            >
+              Voltar
+            </button>
 
           </form>
 
